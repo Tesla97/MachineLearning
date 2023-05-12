@@ -11,13 +11,10 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LogisticRegression
 
 # definizione ensemble
 from HardVotingClassifier import HardVotingClassifier
 from sklearn.ensemble import AdaBoostClassifier
-from sklearn.ensemble import VotingClassifier
 from sklearn.ensemble import BaggingClassifier
 
 
@@ -57,7 +54,6 @@ if __name__ == '__main__':
     print('Accuracy (KNN | TEST)   : %.2f\n'%accuracy_score(y_test,knn.predict(X_test_std)))
     # ensemble classificator
     majorityVoting  = HardVotingClassifier(estimators=[svm,tree,knn])
-    vc              = VotingClassifier(estimators=[knn,svm,tree],voting='hard')
     baggingEnsemble = BaggingClassifier(n_estimators=25,bootstrap=True,bootstrap_features=True,random_state=0)
     boostingEnsemble= AdaBoostClassifier(n_estimators=25,learning_rate=0.1,random_state=0) 
     majorityVoting.fit(X_train_std,y_train)

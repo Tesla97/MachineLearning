@@ -11,8 +11,6 @@ from sklearn.metrics import accuracy_score
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LogisticRegression
 
 
 if __name__ == '__main__':

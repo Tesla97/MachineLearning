@@ -1,7 +1,5 @@
 # Created by Nicola Corea , software engineer
 # Project For Machine Learning Course
-# 11/06/2023
-
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from itertools import combinations

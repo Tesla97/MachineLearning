@@ -1,6 +1,5 @@
 # Created by Nicola Corea , Software Engineer 
 # Project for the course of Machine Learning
-# 12/05/2023
 import pandas as pd
 import numpy  as np
 import os

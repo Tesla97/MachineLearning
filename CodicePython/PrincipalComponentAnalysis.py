@@ -49,8 +49,8 @@ if __name__ == '__main__':
     sommaCumulativa  = np.cumsum(varianzaSpiegata)
     # 5) Visualizzazione Varianze Spiegate e Somme Cumulative Per Decidere Quante Componenti Prendere
     plt.figure(1)
-    plt.bar(range(1,12),varianzaSpiegata,alpha=0.5,align='center',label='Rapporti Varianza Spiegata')
-    plt.step(range(1,12),sommaCumulativa,where='mid',label='Somme Cumulative')
+    plt.bar(range(1,12),varianzaSpiegata,alpha=0.5,align='center',label='Explained Variance Ratio')
+    plt.step(range(1,12),sommaCumulativa,where='mid',label='Cumulative Sums')
     plt.legend(loc='best')
     plt.show()
     # 6) Selezione 5 Autovettori Corrispondenti Ai Primi 5 Autovalori Maggiorni (PCA)
